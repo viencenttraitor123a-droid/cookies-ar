@@ -43,22 +43,19 @@
 <body>
 
     <model-viewer 
-     src="./assets/disgust.glb" 
-     alt="Karakter Disgust"
-     ar 
-     ar-modes="webxr scene-viewer quick-look" 
-     camera-controls 
-     auto-rotate
-    
-     ar-placement="floor"
-     scale="1 1 1" 
-     shadow-intensity="1">
+        src="./assets/disgust.glb" 
+        ios-src="./assets/disgust.glb"
+        alt="Karakter Joy"
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        scale="0.05 0.05 0.05"  ar-scale="auto">
 
-     <button slot="ar-button" class="tombol-kamera">
-        📸 BUKA KAMERA
-     </button>
+        <button slot="ar-button" class="tombol-kamera">
+            📸 BUKA KAMERA SEKARANG
+        </button>
+
     </model-viewer>
 
 </body>
 </html>
-
