@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadness - Cookies AR</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <style>
+        body { margin: 0; background-color: lightskyblue;  }
+        model-viewer { width: 100vw; height: 100vh; }
+        
+        .ar-button {
+            background-color: lightskyblue;
+            border-radius: 20px;
+            border: none;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-family: sans-serif;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <model-viewer 
+        src="./assets/sadness.glb" 
+        ios-src="./assets/sadness.glb"
+        alt="Karakter Sadness 3D"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        shadow-intensity="1">
+
+        <button slot="ar-button" class="ar-button">
+            👋 Munculkan Karakter!
+        </button>
+
+    </model-viewer>
+
+</body>
+</html>
