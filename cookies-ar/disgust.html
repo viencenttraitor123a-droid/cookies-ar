@@ -49,15 +49,30 @@
         ar 
         ar-modes="webxr scene-viewer quick-look" 
         camera-controls 
-        ar-placement="floor"
+        ar-placement="floor" 
         shadow-intensity="1"
-        scale="1 1 1">
+        scale="0.5 0.5 0.5">
 
         <button slot="ar-button" class="tombol-kamera">
             📸 BUKA KAMERA SEKARANG
         </button>
 
+        <div slot="ar-prompt" style="position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 20px; font-weight: bold; pointer-events: none;">
+            👋 Arahkan ke meja & Ketuk Layar!
+        </div>
+
     </model-viewer>
+    
+    <script>
+        const modelViewer = document.querySelector("model-viewer");
+        
+        // Logika: Kalau user mengetuk layar di mode AR, paksa dia muncul
+        modelViewer.addEventListener('ar-status', (event) => {
+            if(event.detail.status === 'session-started'){
+                console.log("AR Dimulai");
+            }
+        });
+    </script>
 
 </body>
 </html>
